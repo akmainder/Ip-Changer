@@ -36,7 +36,7 @@ ${BLUE}PROXY : 127.0.0.1 PORT 8118${RESET}
 "
 
 usage() {
-    echo -e "${BLUE}Usage: $0 [-r SECONDS]${RESET}"
+    echo -e "${BLUE}Usage: ip-changer [-r SECONDS]${RESET}"
     echo -e "${BLUE}Options:${RESET}"
     echo -e "  -r SECONDS  Set IP rotation interval (default: 10 seconds, min: 5 seconds)"
     exit 1
