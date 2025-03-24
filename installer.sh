@@ -17,9 +17,6 @@ command_exists() {
 
 # Function to install dependencies
 install_dependencies() {
-    echo -e "${YELLOW}[*] Updating packages...${RESET}"
-    apt update -y
-
     echo -e "${YELLOW}[*] Installing dependencies...${RESET}"
     apt install -y tor privoxy curl ncurses-utils netcat-openbsd
 
