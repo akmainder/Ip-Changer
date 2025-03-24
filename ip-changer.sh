@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-
+IPCHANGER="$PREFIX/share/ip-changer"
 RED="\e[31m"
 GREEN="\e[32m"
 YELLOW="\e[33m"
@@ -68,14 +68,14 @@ done
 printf "Starting multitor and privoxy server\n"
 pkill tor
 pkill privoxy
-rm -rf ~/.tor_multi ~/.privoxy
-mkdir -p ~/.tor_multi ~/.privoxy
+rm -rf ./.tor_multi ./.privoxy
+mkdir -p ./.tor_multi ./.privoxy
 
 PORTS=(9050 9060 9070 9080 9090)
 CONTROL_PORTS=(9051 9061 9071 9081 9091)
 
 for i in {0..4}; do
-    TOR_DIR="$HOME/.tor_multi/tor$i"
+    TOR_DIR="$IPCHANGER/.tor_multi/tor$i"
     mkdir -p "$TOR_DIR"
     cat <<EOF > "$TOR_DIR/torrc"
 SocksPort ${PORTS[$i]}
@@ -87,14 +87,14 @@ EOF
     sleep 2
 done
 
-cat <<EOF > "$HOME/.privoxy/config"
+cat <<EOF > "$IPCHANGER/.privoxy/config"
 listen-address 127.0.0.1:8118
 EOF
 for port in "${PORTS[@]}"; do
-    echo "forward-socks5 / 127.0.0.1:$port ." >> "$HOME/.privoxy/config"
+    echo "forward-socks5 / 127.0.0.1:$port ." >> "$IPCHANGER/.privoxy/config"
 done
 
-privoxy "$HOME/.privoxy/config" > /dev/null 2>&1 &
+privoxy "$IPCHANGER/.privoxy/config" > /dev/null 2>&1 &
 
 while true; do
     echo -e "${YELLOW}Renewing Tor circuit to change IP...${RESET}"
