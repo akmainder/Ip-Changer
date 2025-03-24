@@ -21,7 +21,7 @@ A powerful and easy-to-use tool to change your IP address automatically using **
 
 ## 🛠 Installation
 
-### Single-Command Installation
+### Method 1: Using `curl` (Manual Installation)
 
 You can install the **IP Changer** tool with a single command:
 
@@ -33,6 +33,16 @@ This will:
 1. Install all dependencies (`tor`, `privoxy`, `curl`, `netcat-openbsd`).
 2. Download the `ip-changer` script.
 3. Move it to `$PREFIX/bin` and make it executable.
+
+### Method 2: Using Alienkrishn Termux Repository
+
+If you have added the **Alienkrishn Termux Repository**, you can install the tool using `apt`:
+
+1. Add the Alienkrishn Termux Repository: [Alienkrishn Termux Repository](https://anon4you.github.io/alienkrishn)
+2. Install the IP Changer tool:
+   ```bash
+   apt install ip-changer
+   ```
 
 ---
 
@@ -114,7 +124,7 @@ This project is licensed under the **BSD-3-Clause License**. See the [LICENSE](L
 For questions or feedback, feel free to reach out:
 
 - **GitHub**: [Anon4You](https://github.com/Anon4You)
-- **Email**: alienkrishn@gmail.com
+- **Email**: your-email@example.com
 
 ---
 

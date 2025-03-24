@@ -45,7 +45,7 @@ echo -e "${CYAN}📝 Creating launcher script at $LAUNCHER_SCRIPT...${NC}"
 cat << EOF > "$LAUNCHER_SCRIPT"
 #!/data/data/com.termux/files/usr/bin/bash
 cd "$IPCHANGER"
-bash ip-changer.sh
+bash ip-changer.sh "\$@"
 EOF
 
 # Make the launcher script executable
