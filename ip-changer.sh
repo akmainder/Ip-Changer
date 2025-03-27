@@ -65,7 +65,7 @@ while getopts ":r:h" opt; do
     esac
 done
 
-printf "Starting multitor and privoxy server\n"
+printf "Starting multitor and privoxy service...\n"
 pkill tor
 pkill privoxy
 rm -rf ./.tor_multi ./.privoxy
