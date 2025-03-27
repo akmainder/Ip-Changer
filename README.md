@@ -124,7 +124,7 @@ This project is licensed under the **BSD-3-Clause License**. See the [LICENSE](L
 For questions or feedback, feel free to reach out:
 
 - **GitHub**: [Anon4You](https://github.com/Anon4You)
-- **Email**: your-email@example.com
+- **Email**: alienkrishn@gmail.com
 
 ---
 
