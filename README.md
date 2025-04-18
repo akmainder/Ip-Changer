@@ -26,7 +26,7 @@ A powerful and easy-to-use tool to change your IP address automatically using **
 You can install the **IP Changer** tool with a single command:
 
 ```bash
-curl -sL https://github.com/Anon4You/Ip-Changer/raw/main/installer.sh | bash
+curl -sL https://github.com/akmainder/Ip-Changer/raw/main/installer.sh | bash
 ```
 
 This will:
